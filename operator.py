@@ -44,17 +44,20 @@ from util import valid_sequences, operator
 # 8 :: bc 2 (odd, then even) x 2 (even, then odd) x 2 (inc vs dec)
 valid_sequences(10)
 
-# Question 3: For n >= 6 and even, how many valid sequences can be achieved by the data operator?
-# 8 :: Still 6, proof by exhaustion:
-# ODD INC, EVEN INC (ex: 135246) :
-# EVEN INC, ODD INC (ex: 246135) :
-# ODD INC, EVEN DEC (ex: 135642) :
-# ODD DEC, EVEN INC (ex: 531246) :
-# EVEN INC, ODD DEC (ex: 246531) :
-# EVEN DEC, ODD INC (ex: 642135) :
-# --
-# ODD DEC, EVEN DEC (ex: 531642) :
-# EVEN DEC, ODD DEC (ex: 642531) :
-# TODO ::
-operator(6)
+# Question 3: For n > 6 and even, how many valid sequences can be achieved by the data operator?
+# As there are 8 valid sequences for all valid n's, we have 6 achievable sequences
+# The only sequences we cannot achieve are those which have both odd and even tokens decreasing
+# This is because to get the decreasing token set (odd or even), you must pass that full set* into storage
+#   *except the last digit, as this becomes the leading digit in the would-be achievable sequence
+# It is then impossible to construct ...1...2 or ...2...1, as we cannot inject values between 1 and 2 in storage
+operator(6)  # TODO :: operator(8)
+
+# Question 4: For n >= 9 and multiple of 3, justify how many 3-valid sequences of length n there are
+# 3-valid sequences are those of the form A B C, where odd even is replaced with 3k 3k+1 3k+2
+# Again we have increasing decreasing, plus ordering
+# We have 2 combinations of each token set for inc dec, 2 x 2 x 2 (8)
+# Also, we have 3! ways of ordering our 3 elements: 3 x 2 x 1 (6)
+# Therefore, there are 48 3-valid sequences
+
+# Question 5:
 

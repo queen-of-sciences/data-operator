@@ -5,11 +5,11 @@ def valid_sequences(n):
     elements = range(n+1)
     base = list(elements)[1:]
 
-    # All odds tokens must be decreasing or increasing
+    # All odds tokens are decreasing or increasing
     increasing_odds = base[0::2]
     decreasing_odds = increasing_odds[::-1]
 
-    # All even tokens must be decreasing or increasing
+    # All even tokens are decreasing or increasing
     increasing_evens = base[1::2]
     decreasing_evens = increasing_evens[::-1]
 
@@ -25,8 +25,9 @@ def valid_sequences(n):
     sequences.append(decreasing_evens + increasing_odds)
     sequences.append(decreasing_evens + decreasing_odds)
 
-    print(len(sequences))
     print(sequences)
+    print(len(sequences))
+
     return sequences
 
 
@@ -35,4 +36,8 @@ def operator(n):
 
     # Remove non-achievable sequences
     for sequence in sequences:
+        # for a given sequence, try to build it from 1...n using the operations
+        # ex: 123456 -> ...
+
+        # test sequence; if it fails, del sequence
         print(sequence)
