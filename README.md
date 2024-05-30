@@ -3,7 +3,9 @@
 
 # operator
 
-<img width="500" src="https://github.com/queen-of-sciences/operator/assets/34093915/a4b4cb87-cd30-44f0-8500-27b3f325a801">
+<br>
+
+<img width="500" src="https://github.com/queen-of-sciences/operator/assets/34093915/a4b4cb87-cd30-44f0-8500-27b3f325a801" alt="">
 
 ## Explanation
 - ℹ️ [MAT 2022 : Question 7](https://www.maths.ox.ac.uk/system/files/attachments/test22.pdf)

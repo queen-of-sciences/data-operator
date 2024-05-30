@@ -1,3 +1,5 @@
+from util import valid_sequences, operator
+
 """
     OPERATOR
     - A data operator is receiving tokens one by one through an input channel
@@ -40,6 +42,7 @@
 
 # Question 2: For n > 6 and even, how many valid sequences are there?
 # 8 :: bc 2 (odd, then even) x 2 (even, then odd) x 2 (inc vs dec)
+valid_sequences(10)
 
 # Question 3: For n >= 6 and even, how many valid sequences can be achieved by the data operator?
 # 8 :: Still 6, proof by exhaustion:
@@ -52,7 +55,6 @@
 # --
 # ODD DEC, EVEN DEC (ex: 531642) :
 # EVEN DEC, ODD DEC (ex: 642531) :
-# TODO
-
-
+# TODO ::
+operator(6)
 
